@@ -257,7 +257,7 @@ body{
     width: 1146px;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 47px;
+    padding-bottom: 47px;
 }
 
 .subtitle_container_contact{
@@ -337,4 +337,8 @@ body{
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+footer{
+    border-radius: 10px;
+    background-color: #020b1a;
 }
