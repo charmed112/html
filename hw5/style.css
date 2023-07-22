@@ -157,12 +157,17 @@ main{
     font-weight: 400;
     line-height: 150%; /* 19.5px */
     background: #F25822;
+
     border-radius: 5px;
     padding: 15px 30px;
     gap: 10px;
     margin-right: 20px;
     border: 3px solid transparent;
-    
+}
+.buttom_link:hover{
+    color:#F25822 ;
+    background-color: #fff;
+    border:3px solid #F25822;
 }
 .mail_picture_content1{
     padding-bottom: 15px;
