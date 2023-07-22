@@ -51,12 +51,15 @@
     margin-top: 100px;
     margin-left: 404px;
     margin-right: 401px;
+    margin-bottom: 100px;
 }
 .second_header_content{
     
     background: #FFF;
     box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
     padding-bottom: 25px;
+    width: 370px;
+    height: 291px;
 }
 .main_title_{
     color: #000;
