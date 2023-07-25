@@ -5,6 +5,7 @@
     outline:none;
     text-decoration: none
 }
+
 .center{
     padding-left: calc(50% - 573px);
     padding-right: calc(50% - 573px);
@@ -37,8 +38,8 @@ body{
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
-    line-height: 160%; /* 28.8px */
-    text-transform: uppercase;
+    line-height: 160%; /* 28.8px
+    text-transform: uppercase; */
     margin-bottom: 10px;
 }
 
@@ -66,9 +67,7 @@ body{
     justify-content: space-between;
 }
 .left, .right{
-    width:44%;
-    display: flex;
-    flex-wrap: wrap;
+   
 }
 
 .buttom-link{
@@ -90,11 +89,12 @@ body{
     border:3px solid #3A68B8;
 }
 .top-content{
-    margin-bottom: 197px;
+    margin-bottom: 17.19022688%;
 }
 .flex{
     display: flex;
     justify-content: space-between;
+    
 }
 .top-logo{
     margin-bottom: 99px;
@@ -171,21 +171,20 @@ body{
     border:3px solid #3A68B8;
    
 }
-.middle-right{
-    /* width: 594px;
-    height: 548px; */
-}
+
 .middle-left{
     margin-right: 5.933682373%;
 }
-
+.item_img{
+    margin-bottom:2.617801047%;
+}
 .item{
     border-radius: 10px;
     background: #132035;
     padding: 30px 2.617801047% 30px 2.617801047%;
     display: grid;
     justify-items: center;
-    gap: 2.61%;
+    gap: 2.61%; 
 }
    
 .item-big{
@@ -208,6 +207,7 @@ body{
     line-height: 160%; /* 25.6px */
     opacity: 0.699999988079071;
     text-align: center;
+    margin-bottom:2.617801047%;
 }
 .heading{
     font-style: normal;
@@ -217,13 +217,14 @@ body{
     font-size: 25px;
     text-align: center;
     color: var(--ffffff, #FFF);
+    margin-bottom:2.617801047%;
 }
 .content{
     display: grid;
     gap: 2.61%;
     grid-template-columns: repeat(3,31%);
     justify-content: center;
-    padding-bottom: 242px;
+    margin-bottom: 242px;
 }
 .title_content_cletnts{
     color: var(--ffffff, #FFF);
@@ -247,15 +248,16 @@ body{
     padding-right: 9.860383944%;
 }
 .content_clients{
-    display: flex;
-    justify-content: center;
-    /* width: 1146px; */
     margin: 0 auto;
+    display: flex;
     margin-bottom: 221px;
-    height: 492px;
+    /* width: 1146px;
+    margin: 0 auto;
+    height: 492px; */
+   
 }
 .left_content_clients{
-    margin-right: 2.181500873%
+    /* margin-right: 2.181500873% */
 
 }
 .container_contact{
@@ -266,10 +268,6 @@ body{
     align-items: flex-start;
     padding-bottom: 47px;
 }
-
-
-
-
 
 
 .subtitle_container_contact{
@@ -358,14 +356,103 @@ footer{
 }
 
 
-@media(min-width:768px) and (max-width:1024px){
+@media (min-width: 768px) and (max-width: 1024px) {
 .center{
     padding-left: calc(50% - 376px);
     padding-right: calc(50% - 376px);
-}
-body{
-width: 768px;
-}
+    }
 
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width:70%;
+    margin-left: 11.02083333%;
+    }
+.logo-1{
+    width:42%;
+    padding-top: 32.05px;
 
+}
+.top-content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    /* gap: 16.66666667%; */
+}
+.title{
+    font-size: 48px;
+}
+.left{
+    width:75%;
+}
+.right{
+   margin-top: 16.66666667%;
+}
+.middle-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    }
+.middle-left{
+    width: 77.34375%;
+    display: flex;
+    align-items: center;
+}
+.middle-right{
+    width: 63.02083333%;
+}
+.item-big{
+    grid-column: span 1;
+    grid-row: span 1;
+    gap:30px;
+}
+.item_img_big{
+    width:25%;
+}
+.content{
+    grid-template-columns: repeat(1,47.13541667%);
+    gap:2.792321117%;
+}
+.item{
+    gap:3.90625%;
+}
+.content_clients{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+}
+.content_clients{
+    margin-top: 52.08333333%;
+}
+.left_content_clients{
+margin-left:14.32291667%;
+}
+.information{ grid-area: a; }
+.about_the_store2{ grid-area: b; }
+.about_the_store{ grid-area: c; }
+  
+.container_contact{
+    margin-left: 5.716145833%;
+    ;
+    display: grid;
+    grid-template-areas: "a a a a a c c c c c c"
+                         "a a a a a c c c c c c"
+                         "a a a a a c c c c c c"
+                         "b b b b b b b b b b b"
+                         "b b b b b b b b b b b"
+                         "b b b b b b b b b b b";
+}
+.about_the_store{
+    margin-left: 100px;
+    width: 60.046875%;
+}
+.logo-2{
+    padding-top: 32.05px;
+}
 }
