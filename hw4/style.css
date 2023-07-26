@@ -616,7 +616,7 @@ margin-left:14.32291667%;
 }
 .about_the_store{
     width: 100%;
-    padding-right: 96px;
+    
 }
 .logo-2{
     padding-top: 32.05px;
@@ -633,9 +633,15 @@ margin-left:14.32291667%;
 }
 .about_the_store{
     margin-left: 0;
-    
+}
+.subtitle_container_contact{
+    text-align: center;
+    align-items: center;
 }
 .about_the_store2{
    text-align: center;
+}
+.the_store_text{
+    padding-right: 96px;
 }
 }
