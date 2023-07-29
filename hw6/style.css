@@ -734,3 +734,68 @@ summary::-webkit-details-marker {
   -ms-flex-align: center;
   align-items: center;
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+.sale{
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(1, 1fr);
+  padding-right: 16px;
+  padding-left: 16px;
+}
+.header__link-site{
+  display: none;
+}
+.promo__img{
+  display: none;
+}
+.header__left{
+  margin-left: 16px;
+}
+.header__right{
+  margin-right: 16px;
+}
+.promo__content{
+  padding-top: 148px;
+  padding-bottom: 149px;
+  padding-left: 56px;
+  padding-right: 56px;
+
+}
+.promo__info{
+  margin-top: 0%;
+}
+.promo__title{
+  font-size:38px;
+}
+.promo__heading{
+  font-size: 20px;
+}
+.promo_fashion{
+  color: #F16D7F;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.sale__item_big {
+  min-height: 0px;
+}
+.accesories{
+  color: #F16D7F;
+  font-family: Lato;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.privipsly{
+  padding-top: 40.61px;
+  padding-left: 74px;
+}
+.advantages{
+  display: none;
+}
+}
