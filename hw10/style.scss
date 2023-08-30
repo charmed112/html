@@ -1,16 +1,4 @@
-$begraungcolor: #FFFFFF;
-$mobile-menu-color: #e8e8e8;
-$arrivals-color: #F8F3F4;
-$colorProduct: #fff;
-$color-input-email: #E1E1E1;
-$color-text: #222222;
-$mob-menu-boxshow: rgba(0, 0, 0, 0.21);
-$color-link-mobile-menu: #6F6E6E;
-$colorSyte: #F16D7F;
-$colorbuttoms: #EF5B70;
-$colorborder: #6F6E6E;
-$shoping-card_product: #575757;
-$shoping-card_adress: #B1B1B1;
+@import "vars";
 
 
 * {
@@ -136,7 +124,7 @@ summary::-webkit-details-marker {
         font-weight: 700;
         font-size: 14px;
         line-height: 17px;
-        color: #000000;
+        color: $colorstandart_text;
     }
 
     &__link {
@@ -263,7 +251,7 @@ summary::-webkit-details-marker {
 .form-registration-input-name {
     margin-bottom: 21px;
     padding: 13px 277.66px 15.5px 17.24px;
-    color: #B1B1B1;
+    color: shoping-card_adress;
     font-family: Lato;
     font-size: 13px;
     font-style: normal;
@@ -274,7 +262,7 @@ summary::-webkit-details-marker {
 .form-registration-input-lastname {
     margin-bottom: 31px;
     padding: 13px 277.66px 15.5px 17.24px;
-    color: #B1B1B1;
+    color: shoping-card_adress;
     font-family: Lato;
     font-size: 13px;
     font-style: normal;
@@ -285,7 +273,7 @@ summary::-webkit-details-marker {
 .radio-name {
     margin-left: 10px;
     margin-right: 20px;
-    color: #000;
+    color: $colorstandart_text;
     font-family: Lato;
     font-size: 11px;
     font-style: normal;
@@ -300,7 +288,7 @@ summary::-webkit-details-marker {
 
 .form-registration-input-email {
     padding: 13px 277.66px 15.5px 17.24px;
-    color: #B1B1B1;
+    color: shoping-card_adress;
     font-family: Lato;
     font-size: 13px;
     font-style: normal;
@@ -312,7 +300,7 @@ summary::-webkit-details-marker {
 .form-registration-input-password {
     margin-bottom: 20px;
     padding: 13px 278px 16px 17.24px;
-    color: #B1B1B1;
+    color: shoping-card_adress;
     font-family: Lato;
     font-size: 13px;
     font-style: normal;
@@ -322,7 +310,7 @@ summary::-webkit-details-marker {
 }
 
 .form-registration-text {
-    color: #B1B1B1;
+    color: shoping-card_adress;
     font-family: Lato;
     font-size: 13px;
     font-style: normal;
@@ -333,7 +321,7 @@ summary::-webkit-details-marker {
 
 .form-registration-link {
     padding: 16px 0px 17px 29px;
-    background-color: #F16D7F;
+    background-color: colorSyte;
     color: #FFFFFF;
 }
 
@@ -347,7 +335,7 @@ summary::-webkit-details-marker {
 }
 
 .registration-text-title {
-    color: #000;
+    color: $colorstandart_text;
     font-family: Lato;
     font-size: 24px;
     font-style: normal;
@@ -357,7 +345,7 @@ summary::-webkit-details-marker {
 }
 
 .registration-text {
-    color: #000;
+    color: $colorstandart_text;
     font-family: Lato;
     font-size: 24px;
     font-style: normal;
@@ -367,7 +355,7 @@ summary::-webkit-details-marker {
 }
 
 .registration_perk-text {
-    color: #000;
+    color: $colorstandart_text;
     font-family: Lato;
     font-size: 24px;
     font-style: normal;
