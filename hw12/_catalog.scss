@@ -1,0 +1,229 @@
+@import 'mixins';
+@import 'vars';
+
+
+.filter {
+    height: 132px;
+    position: relative;
+
+    &-left {
+        max-width: 360px;
+        position: absolute;
+        top: 40px;
+        z-index: 1000;
+
+    }
+
+    &-block {
+        width: 360px;
+        padding: 13px 16px 16px;
+
+        &[open] {
+            background-color: #fff;
+            box-shadow: 6px 4px 35px rgb(0, 0, 0, 0.21);
+
+        }
+
+        &[open] .filter-heading {
+            color: $colorSelectSite;
+        }
+
+        &[open] path {
+            fill: $colorSelectSite;
+        }
+    }
+
+    &-item {
+        margin-top: 16px;
+
+        &-heading {
+            @include font($coloLinkMenuText, 400, 1rem);
+            line-height: 17px;
+            padding: 8px 11px 11px 11px;
+            border-bottom: 1px solid #ebebeb;
+            border-left: 5px solid $colorSelectSite;
+        }
+
+        &[open] .filter-item-heading {
+            color: $colorSelectSite
+        }
+    }
+
+    &-summary {
+        @include flex-alignment(11px);
+    }
+
+    &-heading {
+        @include font($colorText, 600, 1rem);
+        line-height: 17px;
+    }
+
+    &-right {
+        position: absolute;
+        left: 43%;
+        top: 40px;
+        display: flex;
+        gap: 28px;
+        padding: 13px 16px 16px;
+    }
+}
+
+.filter-links-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 11px;
+    padding: 24px 16px;
+}
+
+.category-link {
+    @include font($coloLinkMenuText, 400, 1rem);
+    line-height: 17px;
+
+    &:hover {
+        color: $colorSelectSite;
+    }
+}
+
+.sort {
+    @include flex-alignment(10px);
+
+    &-heading {
+        @include font($coloLinkMenuText, 400, 1rem);
+    }
+}
+
+.trends-link {
+    @include flex-start-column(10px);
+    width: 120px;
+    padding: 12px 9px 12px 12px;
+    background-color: #FFF;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    position: absolute;
+    top: 35px;
+    z-index: 10;
+
+    & a {
+        color: $coloLinkMenuText;
+
+        &:visited {
+            color: $coloLinkMenuText;
+        }
+
+        &:hover {
+            color: $colorSelectSite;
+        }
+    }
+}
+
+.choose-size {
+    width: 80px;
+    padding: 9px 9px 12px 9px;
+    background-color: #FFF;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    position: absolute;
+    top: 35px;
+    z-index: 10;
+    @include flex-start-column(9px);
+}
+
+.choose-chek {
+    @include flex-alignment(10px);
+
+    & label {
+        @include font($coloLinkMenuText, 400, 1rem);
+        font-family: Roboto;
+    }
+}
+
+
+.block-number-page {
+    margin-top: 48px;
+    height: 43px;
+    width: 282px;
+    border: 1px solid #C4C4C4;
+    margin-bottom: 96px;
+    margin-left: auto;
+    margin-right: auto;
+    @include flex-alignment(16px);
+    justify-content: space-around;
+}
+
+.enumeration {
+    @include font(#C4C4C4, 300, 1.14rem);
+
+    &-link {
+        transition: all 0.3s;
+    }
+
+    &-link:hover {
+        color: $colorSelectSite;
+        cursor: default;
+    }
+}
+
+path:hover {
+    fill: $colorSelectSite;
+}
+
+.first-number {
+    color: $colorSelectSite;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .filter-right {
+        left: 50vw;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .under-header {
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-top: 24px;
+        padding-bottom: 46px;
+        align-items: center;
+
+        &__subtitle {
+            margin-bottom: 14px;
+            margin-top: 36px;
+        }
+    }
+
+    .card-img {
+        width: 30%;
+    }
+
+    .filter {
+        &-heading {
+            display: none;
+
+        }
+
+        &-summary {
+            width: 30px;
+
+            & svg {
+                width: 25px;
+            }
+        }
+
+        &-right {
+            left: 10%;
+        }
+
+        &-block {
+            padding-left: 0px;
+            width: 250px;
+        }
+    }
+
+    .sort-heading {
+        font-size: 0.86rem;
+    }
+
+
+    .block-number-page {
+        // margin-top: 500px;        
+    }
+}

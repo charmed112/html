@@ -1,0 +1,159 @@
+@import 'mixins';
+@import 'vars';
+
+.registration {
+    padding-top: 64px;
+    padding-bottom: 96px;
+    display: flex;
+    gap: 128px;
+}
+
+.registration__left {
+    display: flex;
+    flex-direction: column;
+
+    &_name {
+        @include font(#222, 300, 1.14rem);
+        margin-bottom: 20px;
+    }
+
+    & input {
+        margin-bottom: 20px;
+        padding: 12px 12px 15px 16px;
+        outline: none;
+        border: 1px solid #A4A4A4;
+
+        &:last-of-type {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__check {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 33px;
+
+        & input {
+            display: none;
+
+            &[type=radio]:checked+label:before {
+                background: #000;
+                border-radius: 50%;
+                transform: scale(0.5);
+                outline: 5px solid #A4A4A4;
+            }
+        }
+    }
+
+    &_sex {
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        padding-left: 25px;
+        @include font(#000, 300, 0.79rem);
+
+        &:before {
+            content: "";
+            width: 17px;
+            height: 18px;
+            position: absolute;
+            left: 0;
+            background: url(images/Ellipse6.svg) 0 0 no-repeat;
+        }
+    }
+
+    &_text {
+        @include font(#B1B1B1, 300, 1rem);
+        margin-bottom: 39px;
+    }
+
+    &_btn {
+        width: 167px;
+        padding: 16px 20px 16px 29px;
+        background-color: $colorSelectSite;
+        @include font(#fff, 400, 1rem);
+        transition: all 0.4s;
+        border: 1px solid transparent;
+
+        &:hover {
+            background-color: #fff;
+            border: 1px solid $colorSelectSite;
+            color: $colorSelectSite;
+
+            & path {
+                fill: $colorSelectSite;
+            }
+        }
+
+        & .btn-name {
+            margin-right: 20px;
+        }
+    }
+}
+
+.registration__right {
+    &_title {
+        margin-bottom: 22px;
+        @include font(#000, 300, 1.71rem);
+    }
+
+    &_text {
+        @include font(#000, 300, 1.71rem);
+        margin-bottom: 21px;
+    }
+}
+
+.list-item {
+    list-style-image: url(images/Vector.svg);
+    list-style-position: inside;
+    margin-bottom: 16px;
+    @include font(#000, 300, 1.71rem);
+
+    &::before {
+        content: "";
+        margin-right: 23px;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+    .registration {
+        gap: 22px;
+
+        &__left {
+            min-width: $cardsWidth;
+        }
+
+        &__right {
+            & * {
+                font-size: 1.14rem;
+            }
+
+            &_title {
+                margin-bottom: 32px;
+            }
+
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .registration {
+        flex-direction: column;
+        gap: 40px;
+        padding-top: 40px;
+        padding-bottom: 84px;
+
+        &__right_title {
+            font-size: 1.15rem;
+        }
+
+        &__right_text {
+            font-size: 1.15rem;
+        }
+    }
+
+    .list-item {
+        font-size: 1.15rem;
+
+    }
+}

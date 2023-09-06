@@ -1,0 +1,262 @@
+@import 'mixins';
+@import 'vars';
+
+
+.shopping {
+    display: flex;
+
+    column-gap: 128px;
+    margin-top: 96px;
+
+    &__left {
+        width: 652px;
+        @include flex-start-column(40px);
+        padding-bottom: 128px;
+
+        &__product {
+            display: flex;
+            box-shadow: 6px 4px 35px rgb(0, 0, 0, 0.21);
+            width: 100%;
+            position: relative;
+        }
+
+        &__discrip {
+            padding: 22px 31px;
+
+            &_name {
+                @include font(#222, 400, 1.71rem);
+                margin-bottom: 42px;
+                max-width: 200px;
+            }
+
+            &-text {
+                @include font(#575757, 400, 1.57rem);
+            }
+
+            & p {
+                margin-bottom: 6px;
+            }
+        }
+
+        &__close-svg {
+            position: absolute;
+            top: 28px;
+            right: 22px;
+        }
+
+        &__input {
+            margin-left: 24px;
+            padding-left: 15px;
+            width: 44px;
+            height: 25px;
+            @include font(#656565, 400, 1.29rem);
+            outline: none;
+            border-color: 1px solid #EAEAEA;
+        }
+    }
+
+
+    &__right {
+        max-width: 360px;
+
+
+        &__title {
+            margin-top: 17px;
+            margin-bottom: 20px;
+            @include font(#222, 300, 1.14rem);
+        }
+
+        &__input {
+            padding: 13px 17px;
+            border: 1px solid #A4A4A4;
+            margin-bottom: 20.5px;
+            width: 100%;
+
+            &:last-of-type {
+                margin-bottom: 23px;
+            }
+
+            &:focus {
+                opacity: 0.3;
+            }
+        }
+
+        &__btn {
+            @include font(#4A4A4A, 300, 0.79rem);
+            padding: 10px 15px;
+            border: 1px solid #A4A4A4;
+            margin-bottom: 60px;
+            transition: all 0.2s;
+
+            &:hover {
+                color: $colorSelectSite;
+                border-color: $colorSelectSite;
+            }
+        }
+    }
+
+    &__btn-box {
+        padding-top: 32px;
+        @include flex-nav;
+        gap: 150px;
+    }
+
+    &__btn {
+        padding: 16px 40px;
+        @include font(#000, 300, 1rem);
+        transition: all 0.2s;
+        border: 1px solid #A4A4A4;
+
+        &:hover {
+            border: 1px solid $colorSelectSite;
+            color: $colorSelectSite;
+        }
+
+    }
+}
+
+
+.product-price {
+    color: $colorSelectSite;
+}
+
+.info-order {
+    // max-width: 360px;
+    height: 214px;
+    background-color: #F5F3F3;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    &__subtitle {
+        @include font(#4A4A4A, 400, 0.79rem);
+        margin-bottom: 12px;
+        margin-top: 39px;
+    }
+
+    &__title {
+        @include font(#222, 300, 1.14rem);
+        margin-bottom: 21px;
+    }
+
+    & span {
+        margin-left: 30px;
+        margin-right: 34px;
+    }
+
+    &__price {
+        font-weight: 700;
+        color: $colorSelectSite;
+        margin-right: 37px;
+    }
+
+    & hr {
+        display: block;
+        align-self: center;
+        width: 273px;
+    }
+
+    &__btn {
+        align-self: center;
+        margin-top: 17px;
+        width: 273px;
+        background-color: $colorSelectSite;
+        color: #fff;
+        padding: 15px 42px;
+        border: transparent;
+        transition: all 0.4s;
+
+        &:hover {
+            background-color: #fff;
+            border: 1px solid $colorSelectSite;
+            color: $colorSelectSite;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .shopping {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__left {
+            width: 90vw;
+        }
+
+        &__btn-box {
+            width: 90vw;
+        }
+
+        &__right {
+            max-width: 90vw;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(338px, 1fr));
+            gap: $cardsGap/2;
+        }
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .under-header__subtitle {
+        margin: 0 auto;
+    }
+
+    .shopping {
+        width: 98%;
+        flex-wrap: wrap;
+
+        &__left {
+            width: 96vw;
+            padding-bottom: 48px;
+
+            &__product {
+                width: 98%;
+
+                & img {
+                    width: 144px;
+                }
+            }
+
+            &__discrip {
+                padding: 17px 13.5px;
+
+                &_name {
+                    max-width: 140px;
+                    font-size: 1.14rem;
+                }
+
+                &-text {
+                    font-size: 1rem;
+                }
+            }
+
+            &__close-svg {
+                top: 17px;
+                right: 12px;
+                width: 10px;
+            }
+        }
+
+
+        &__btn-box {
+            justify-content: center;
+            width: 96vw;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        &__btn {
+            padding: 9px 18px;
+            font-size: 0.86rem;
+            min-width: 175px;
+        }
+
+        &__right {
+            max-width: 98vw;
+            width: 98vw;
+        }
+
+    }
+}

@@ -1,0 +1,172 @@
+@import 'mixins';
+@import 'vars';
+
+
+
+.under-header {
+    @include flex-nav();
+    background-color: #F8F3F4;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__subtitle {
+        @include font($colorSelectSite, 400, 1.71rem);
+    }
+}
+
+.bread-crambs {
+    display: flex;
+
+    &-link {
+        @include font(#636363, 300, 1rem);
+
+        &:hover {
+            color: $colorSelectSite;
+        }
+    }
+
+    & li:last-child a {
+        font-weight: 700;
+        color: $colorSelectSite;
+    }
+
+    & li:not(:last-child) a::after {
+        content: '/';
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+
+.carousel-img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.discription-prodact {
+    @include flex-column-center();
+    padding-bottom: 194px;
+
+    &-subtitle {
+        @include font($colorSelectSite, 300, 1rem);
+        margin-top: 64px;
+    }
+
+    &-name {
+        @include font(#4D4D4D, 300, 1.29rem);
+        margin-bottom: 48px;
+    }
+
+    &-text {
+        @include font(#5E5E5E, 300, 1rem);
+        margin-bottom: 32px;
+        max-width: 555px;
+    }
+
+    &-price {
+        @include font($colorSelectSite, 300, 1.71rem);
+    }
+
+    &-characteristics {
+        padding-top: 130px;
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        padding-bottom: 48px;
+        position: relative;
+    }
+}
+
+.stripe {
+    width: 63px;
+    height: 3px;
+    background-color: $colorSelectSite;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.characteristics-box {
+    @include flex-alignment(8px);
+}
+
+.characteristics-heading {
+    @include font($coloLinkMenuText, 400, 1rem);
+
+    &-block {
+        display: flex;
+        align-items: center;
+        padding-bottom: 48px;
+    }
+}
+
+.characteristics-svg {
+    margin-left: 8px;
+}
+
+.choose-color {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 10;
+}
+
+.choose-size {
+    padding: 7px 30px 11px 9px;
+    background-color: #FFF;
+    box-shadow: 6px 4px 35px rgb(0, 0, 0, 0.21);
+    position: absolute;
+    z-index: 10;
+}
+
+.choose-quantity {
+    position: absolute;
+    z-index: 10;
+}
+
+.btn-add-to-trolley {
+    border: 1px solid #FF6A6A;
+    padding: 15px 56px 15px 24px;
+    @include font($colorSelectSite, 400, 1.14rem);
+    transition: all 0.4s;
+
+    &:hover {
+        color: #fff;
+        background-color: $colorSelectSite;
+
+        & .trolley path {
+            fill: #fff;
+        }
+    }
+}
+
+.trolley {
+    margin-right: 24px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    .carousel-img {
+        width: 320px;
+    }
+
+    .carousel-control-prev {
+        left: 35px;
+    }
+
+    .discription-prodact {
+        padding-bottom: 128px;
+
+        &-text {
+            max-width: 326px;
+            text-align: center;
+        }
+    }
+
+    .discription-prodact-characteristics {
+        padding-top: 67px;
+    }
+
+    .characteristics-heading {
+        font-size: 0.71rem;
+    }
+
+}
